@@ -132,7 +132,8 @@ espItem:OnChanged(function()
 	        if item1.Name == "ESPBILLBOARD" then
             item1.Destroy()
         end
-      end
+    end
+			end
 end)
     -- Addons:
 -- SaveManager (Allows you to have a configuration system)
