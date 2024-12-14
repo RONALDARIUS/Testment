@@ -122,7 +122,7 @@ local Options = Fluent.Options
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "box" }),
-    Misc = Window:AddTab({ Title = "Misc", Icon = "boxes" })
+    Misc = Window:AddTab({ Title = "Misc", Icon = "boxes" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -141,8 +141,8 @@ espItem:OnChanged(function()
             print("Item Disconnect")
         end
         for _,item in pairs(workspace.Items:GetDescendants()) do
-	        if item1.Name == "ESPBILLBOARD" then
-                item1:Destroy()
+	        if item.Name == "ESPBILLBOARD" then
+                item:Destroy()
             end
       end
     end
@@ -193,16 +193,17 @@ Tabs.Misc:AddButton({
     if not dex then
         loadstring(game:HttpGet("https://github.com/RONALDARIUS/Testment/raw/refs/heads/main/Dex.lua"))()
         Fluent:Notify({
-            Title = 'Executing Dex..'
-            Content = "Loading Dex..."
+            Title = 'Executing Dex..',
+            Content = "Loading Dex...",
             Duration = 5
         })
     else
             Fluent:Notify({
-            Title = 'Executed'
-            Content = "Dex Already Been Executed"
+            Title = 'Executed',
+            Content = "Dex Already Been Executed",
             Duration = 5
         })
+    end
     end
 })
 
@@ -213,16 +214,17 @@ Tabs.Misc:AddButton({
     if not infyld then
         loadstring(game:HttpGet("https://github.com/RONALDARIUS/Testment/raw/refs/heads/main/InfiniteYield.lua"))()
         Fluent:Notify({
-            Title = 'Executing Infinite Yield..'
-            Content = "Loading Infinite Yield..."
+            Title = 'Executing Infinite Yield..',
+            Content = "Loading Infinite Yield...",
             Duration = 5
         })
     else
             Fluent:Notify({
-            Title = 'Executed'
-            Content = "Infinite Yield Already Been Executed"
+            Title = 'Executed',
+            Content = "Infinite Yield Already Been Executed",
             Duration = 5
         })
+    end
     end
 })
 
